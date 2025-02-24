@@ -23,9 +23,6 @@ public class MessageMapper {
                 .onItem()
                 .ifNotNull()
                 .transform(user -> {
-                    for (int i = 1; i < 6; i++) {
-                        System.out.println(BcryptUtil.bcryptHash("password" + i));
-                    }
                     message.setSender(user);
                     return message;
                 })
